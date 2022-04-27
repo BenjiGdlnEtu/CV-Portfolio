@@ -1,0 +1,455 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui;
+}
+
+#divSuprem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    background-color: cadetblue;
+}
+
+h1 {
+    padding-left: 5%;
+    padding-top: 0.5vh;
+}
+
+#sousPresentation2 h2 {
+    color: rgb(80, 80, 80);
+    padding-left: 5%;
+}
+
+p{
+    padding-left: 5%;
+    padding-right: 2.5%;
+    list-style-type: none;
+}
+
+li {
+    padding-left: 3%;
+    padding-right: 2.5%;
+    padding-bottom: 0.5em;
+    list-style-type: none;
+}
+
+#entete {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #06305f;
+    color: rgb(255, 255, 255);
+}
+
+#entetePart1, #entetePart2 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#entetePart1 {
+    margin-bottom: 2vh;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+#entetePart2 h2 {
+    padding-left: 5%;
+}
+
+#contactButton {
+    font-size: medium;
+    border-left: 3px solid rgb(161, 159, 159);
+    padding-right: 6vh;
+    justify-self:flex-end;
+    align-self: end;
+    color: rgb(161, 159, 159);
+    transition: all 0.5s;
+}
+
+#RetExpButton {
+    font-size: medium;
+    border-left: 3px solid rgb(161, 159, 159);
+    padding-right: 6vh;
+    align-self: flex-end;
+    align-self: end;
+    color: rgb(161, 159, 159);
+    transition: all 0.5s;
+}
+
+#contactButton:hover, #RetExpButton:hover {
+    color:rgb(217, 216, 216);
+    transition: all 0.5s;
+}
+
+#presentation {
+    display: flex;
+    height: 75%;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+#sousPresentation1, #sousPresentation2 {
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+}
+
+#sousPresentation1 {
+    border-top: 2px solid rgb(110, 110, 110);
+    border-right: 1px solid rgb(110, 110, 110);
+    border-bottom: 2px solid rgb(110, 110, 110);
+    position: relative;
+}
+
+#sousPresentation1 p { 
+    position: absolute;
+    top: 26%;
+    left: 23%;
+    width: 100%;
+    height: 50%;
+    color: #09468b;
+    font-size: 6.5em;
+    text-shadow: white 3px 3px;
+}
+
+#sousPresentation2 {
+    color: rgb(104, 104, 104);
+    border-left: 1px solid rgb(110, 110, 110);
+    border-top: 2px solid rgb(110, 110, 110);
+    border-bottom: 2px solid rgb(110, 110, 110);
+}
+
+#imgPresentation {
+    height: 100%;
+    width: 100%;
+    filter: blur(1.5px);
+}
+
+#menuDivMinSize {
+    display: none;
+    height: 0%;
+}
+
+#menuDivLargeSize {
+    display: flex;
+    height: 7%;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+}
+
+#sousMenuResponsiveLargeSize {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu2LargeSize,
+#menu3LargeSize,
+#menu4LargeSize,
+#menu5LargeSize,
+#menu6LargeSize {
+    flex: 1;
+    height: 50%;
+    border-left: 2px solid rgb(166, 166, 166);
+    transition: all 0.5s;
+}
+
+#menu1LargeSize {
+    flex: 1;
+    height: 50%;
+    transition: all 0.5s;
+}
+
+#menu1LargeSize:hover,
+#menu2LargeSize:hover,
+#menu3LargeSize:hover,
+#menu4LargeSize:hover,
+#menu5LargeSize:hover,
+#menu6LargeSize:hover {
+    height: 100%;
+    transition: all 0.5s;
+}
+
+#menu1LargeSize:hover + #menu2LargeSize,
+#menu2LargeSize:hover + #menu3LargeSize,
+#menu3LargeSize:hover + #menu4LargeSize,
+#menu4LargeSize:hover + #menu5LargeSize,
+#menu5LargeSize:hover + #menu6LargeSize {
+    height: 100%;
+    transition: all 0.5s;
+}
+
+#titreDivLargeSize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#conteneurLargeSizeTitreDiv {
+    display: flex;
+    align-items:center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    color: rgb(77, 77, 77);
+}
+
+#menu1Cache,
+#menu2Cache,
+#menu3Cache,
+#menu4Cache,
+#menu5Cache,
+#menu6Cache {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    right: -100%;
+    height: 75%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#titleHideMenus {
+    font-size:1.5em;
+    color: rgb(45, 45, 45);
+    text-decoration: underline;
+}
+
+#menu1LargeSize:hover #menu1Cache,
+#menu2LargeSize:hover #menu2Cache,
+#menu3LargeSize:hover #menu3Cache,
+#menu4LargeSize:hover #menu4Cache,
+#menu5LargeSize:hover #menu5Cache,
+#menu6LargeSize:hover #menu6Cache {
+    display: block;
+    opacity: 1;
+    padding: 0px;
+    margin: 0px;
+    height: 75%;
+    right: 0.1%;
+    width: 100%;
+    bottom: 15%;
+    color: rgb(104, 104, 104);
+    background-color: rgb(255, 255, 255);
+}
+
+#contenuMenuCache {
+    display:flex;
+}
+
+#paragrapheMenuCache {
+    display: flex;
+    flex-direction: column;
+}
+
+#imgPong,
+#imgLowatem,
+#imgVirtualMachine,
+#imgSiteWeb {
+    padding-top: 1%;
+    padding-left: 2%;
+    height: 55vh;
+    width: 85vh;
+}
+
+#imgBDD {
+    padding-top: 1%;
+    padding-left: 2%;
+    height: 55vh;
+    width: 85vh;
+}
+
+#imgCreationEntreprise {
+    padding-top: 1%;
+    padding-left: 2%;
+    height: 55vh;
+    width: 85vh;
+}
+
+#imgLogoInsta, #imgLogoFacebook {
+    height: 30px;
+    width: 30px;
+}
+
+#dow {
+    display: flex;
+    flex-direction: row;
+}
+
+#imgLogoPDF {
+    width: 5vh;
+    height: 6vh;
+    border: 2px solid rgb(100, 100, 100)
+}
+
+#dow {
+    display: flex;
+    flex-direction: row;
+    margin-left: 75%;
+}
+
+#paragrapheMenuCache h2 {
+    margin-left: 3vh;
+}
+
+#menu1Cache #imgLogoPDF {
+    margin-bottom: 50%;
+}
+
+#paragrapheMenuCache p {
+    padding-top: 1em;
+    padding-right: 2em;
+}
+
+#basDePage {
+    width: 100%;
+    height: 8%;
+    background-color: rgb(57, 54, 54);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:812px) {
+
+    #divSuprem {
+        height: 150vh;
+        width: 100%;
+    }
+
+    #menuDivLargeSize {
+        display: none;
+    }
+
+    #menuDivMinSize {
+        display: flex;
+        height: 50vh;
+        width: 100%;
+        background-color: rgb(228, 228, 228);
+    }
+
+    #entetePart1 {
+        width: 50%;
+        font-size: 10px;
+    }
+
+    #entetePart2 {
+        width: 50%;
+        border: none;
+        font-size: 1%;
+    }
+
+    #entetePart2 h2 {
+        padding-left: 0%;
+        border: none;
+    }
+
+    #entete {
+        height: 10vh;
+        width: 100%;
+    }
+
+    #presentation {
+        flex-direction: column;
+        height: 80vh;
+        width: 100%;
+        text-align: center;
+    }
+
+    #sousPresentation1 {
+        border-left: none;
+        height: 50%;
+        width: 100%;
+    }
+
+    #sousPresentation2 {
+        border-right: none;
+        height: 50%;
+        width: 100%;
+    }
+
+    #sousMenuMinSizeResponsive {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    #basDePage {
+        height: 10vh;
+        width: 100%;
+    }
+
+    #menu1MinSize,
+    #menu2MinSize,
+    #menu3MinSize,
+    #menu4MinSize,
+    #menu5MinSize,
+    #menu6MinSize {
+        border: 3px solid rgb(112, 112, 112);
+        border-radius: 50px;
+        margin: 10%;
+        width: 75%;
+        text-align: center;
+        background-color: white;
+        transition: all 0.5s;
+    }
+
+    #menu1MinSize:hover #titreDivMinSize,
+    #menu2MinSize:hover #titreDivMinSize,
+    #menu3MinSize:hover #titreDivMinSize,
+    #menu4MinSize:hover #titreDivMinSize,
+    #menu5MinSize:hover #titreDivMinSize,
+    #menu6MinSize:hover #titreDivMinSize {
+        color: white;
+        transition: all 0.5s;
+    }
+
+    #menu1MinSize:hover,
+    #menu2MinSize:hover,
+    #menu3MinSize:hover,
+    #menu4MinSize:hover,
+    #menu5MinSize:hover,
+    #menu6MinSize:hover {
+        background-color: rgb(112, 112, 112);
+        color: rgb(203, 203, 203);
+        transition: all 0.5s;
+    }
+
+    #menu1MinSize:hover p,
+    #menu2MinSize:hover p,
+    #menu3MinSize:hover p,
+    #menu4MinSize:hover p,
+    #menu5MinSize:hover p,
+    #menu6MinSize:hover p {
+        color: white;
+        transition: all 0.5s;
+
+    }
+
+    #menu1LargeSize:hover #menu1Cache,
+    #menu2LargeSize:hover #menu2Cache,
+    #menu3LargeSize:hover #menu3Cache,
+    #menu4LargeSize:hover #menu4Cache,
+    #menu5LargeSize:hover #menu5Cache,
+    #menu6LargeSize:hover #menu6Cache {
+        display: none;
+    }
+
+    #titreDivMinSize p {
+        color: black;
+        text-decoration: none;
+    }
+}
