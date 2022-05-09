@@ -410,7 +410,7 @@ li {
     font-size: 14px;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1500px) {
 
     #divSuprem {
         height: 200vh;
