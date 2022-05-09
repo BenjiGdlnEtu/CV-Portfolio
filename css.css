@@ -18,22 +18,61 @@ h1 {
     padding-top: 0.5vh;
 }
 
+
+.traitH {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.traitV {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.traitVertical {
+    height: 85%;
+    text-align: center;
+    border-left: 2.5px solid rgb(65, 65, 65);
+}
+
+
+.traitHoriz {
+    width: 75%;
+    margin-top: 1.5%;
+    text-align: center;
+    border-top: 2.5px solid rgb(65, 65, 65);
+}
+
 #sousPresentation2 h2 {
     color: rgb(80, 80, 80);
     padding-left: 5%;
 }
 
 p{
-    padding-left: 5%;
-    padding-right: 2.5%;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 li {
     padding-left: 3%;
     padding-right: 2.5%;
     padding-bottom: 0.5em;
+    font-size: 17px;
     list-style-type: none;
+}
+
+#entete {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    width: 100%;
+    
 }
 
 #entete {
@@ -43,6 +82,7 @@ li {
     width: 100%;
     justify-content: space-between;
     background-color: #06305f;
+    border-bottom:  2px solid rgb(110, 110, 110);
     color: rgb(255, 255, 255);
 }
 
@@ -53,7 +93,6 @@ li {
 }
 
 #entetePart1 {
-    margin-bottom: 2vh;
     justify-content: flex-start;
     width: 100%;
     height: 100%;
@@ -63,72 +102,102 @@ li {
     padding-left: 5%;
 }
 
-#contactButton {
+#contactButton, #RetExpButton {
     font-size: medium;
-    border-left: 3px solid rgb(161, 159, 159);
+    border-left: 3px solid rgb(188, 188, 188);
     padding-right: 6vh;
     justify-self:flex-end;
     align-self: end;
-    color: rgb(161, 159, 159);
-    transition: all 0.5s;
-}
-
-#RetExpButton {
-    font-size: medium;
-    border-left: 3px solid rgb(161, 159, 159);
-    padding-right: 6vh;
-    align-self: flex-end;
-    align-self: end;
-    color: rgb(161, 159, 159);
+    color: rgb(240, 240, 240);
     transition: all 0.5s;
 }
 
 #contactButton:hover, #RetExpButton:hover {
-    color:rgb(217, 216, 216);
+    color:rgb(161, 159, 159);
+    border-left: 3px solid rgb(240, 240, 240);
     transition: all 0.5s;
 }
 
 #presentation {
     display: flex;
-    height: 75%;
+    height: 71.5%;
     width: 100%;
     background-color: aquamarine;
 }
 
-#sousPresentation1, #sousPresentation2 {
+#sousPresentation1,
+#sousPresentation2,
+#sousPresentation3 {
     flex: 1;
     background-color: rgb(255, 255, 255);
 }
 
 #sousPresentation1 {
-    border-top: 2px solid rgb(110, 110, 110);
     border-right: 1px solid rgb(110, 110, 110);
-    border-bottom: 2px solid rgb(110, 110, 110);
     position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #sousPresentation1 p { 
-    position: absolute;
-    top: 26%;
-    left: 23%;
-    width: 100%;
-    height: 50%;
-    color: #09468b;
-    font-size: 6.5em;
-    text-shadow: white 3px 3px;
+    z-index: 0;
+    padding-top: 61.5vh;
+    color: #4c70a7;
+    font-size: 3em;
+    text-shadow: rgb(255, 255, 255) 1px 1px;
+}
+
+#textOnImg {
+    display: flex;
+    justify-content: center;
 }
 
 #sousPresentation2 {
     color: rgb(104, 104, 104);
     border-left: 1px solid rgb(110, 110, 110);
-    border-top: 2px solid rgb(110, 110, 110);
-    border-bottom: 2px solid rgb(110, 110, 110);
+}
+
+#sousPresentation2 p {
+    margin-left: 4em;
+    margin-bottom: 1.5em;
+    margin-right: 2em;
+    text-align: justify;
+    font-size: 17px;
+}
+
+#sousPresentation2 h2 {
+    font-size: 30px;
 }
 
 #imgPresentation {
     height: 100%;
     width: 100%;
-    filter: blur(1.5px);
+    position: absolute;
+}
+
+#sousPresentation3 {
+    color: rgb(110, 110, 110);
+}
+
+#bandeauRetExp {
+    display: flex;
+    height: 3.5%;
+    background-color: rgb(110, 110, 110);
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#conteneurTextBandeauRetExp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#textBandeauRetExp {
+    color: white;
+    text-align: center;
 }
 
 #menuDivMinSize {
@@ -141,6 +210,7 @@ li {
     height: 7%;
     width: 100%;
     align-items: center;
+    border-top: 2px solid rgb(110, 110, 110);
     background-color: white;
 }
 
@@ -214,12 +284,21 @@ li {
 #menu6Cache {
     display: none;
     position: absolute;
-    opacity: 0;
     width: 100%;
     right: -100%;
     height: 75%;
     margin: 0px;
     padding: 0px;
+}
+
+#menu1Cache #titleHideMenus,
+#menu2Cache #titleHideMenus,
+#menu3Cache #titleHideMenus,
+#menu4Cache #titleHideMenus,
+#menu5Cache #titleHideMenus,
+#menu6Cache #titleHideMenus {
+    margin-left: 2%;
+    margin-top: 1%;
 }
 
 #titleHideMenus {
@@ -235,15 +314,14 @@ li {
 #menu5LargeSize:hover #menu5Cache,
 #menu6LargeSize:hover #menu6Cache {
     display: block;
-    opacity: 1;
     padding: 0px;
     margin: 0px;
-    height: 75%;
+    height: 76%;
     right: 0.1%;
     width: 100%;
-    bottom: 15%;
+    bottom: 14%;
     color: rgb(104, 104, 104);
-    background-color: rgb(255, 255, 255);
+    background-color: white;
 }
 
 #contenuMenuCache {
@@ -319,18 +397,31 @@ li {
     height: 8%;
     background-color: rgb(57, 54, 54);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-@media screen and (max-width:812px) {
+#basDePage p {
+    color: white;
+}
+
+#textBasDePage {
+    font-size: 14px;
+}
+
+@media screen and (max-width:1200px) {
 
     #divSuprem {
-        height: 150vh;
+        height: 200vh;
         width: 100%;
     }
 
     #menuDivLargeSize {
+        display: none;
+    }
+
+    .traitV{
         display: none;
     }
 
@@ -352,6 +443,15 @@ li {
         font-size: 1%;
     }
 
+    #contactButton, #RetExpButton {
+        border-left: none;
+        border: 2px solid red;
+    }
+
+    #contactButton:hover, #RetExpButton:hover {
+        border-left: none;
+    }
+
     #entetePart2 h2 {
         padding-left: 0%;
         border: none;
@@ -364,7 +464,7 @@ li {
 
     #presentation {
         flex-direction: column;
-        height: 80vh;
+        height: 150vh;
         width: 100%;
         text-align: center;
     }
@@ -383,12 +483,14 @@ li {
 
     #sousMenuMinSizeResponsive {
         flex-direction: column;
+        align-items: center;
+        justify-self:center;
         height: 100%;
         width: 100%;
     }
 
     #basDePage {
-        height: 10vh;
+        height: 14vh;
         width: 100%;
     }
 
@@ -398,10 +500,14 @@ li {
     #menu4MinSize,
     #menu5MinSize,
     #menu6MinSize {
+        display: flex;
+        align-items: center;
+        justify-content:center;
         border: 3px solid rgb(112, 112, 112);
         border-radius: 50px;
         margin: 10%;
         width: 75%;
+        height: 75px;
         text-align: center;
         background-color: white;
         transition: all 0.5s;
@@ -439,6 +545,20 @@ li {
 
     }
 
+    li {
+        padding-left: 0%;
+        margin-left: 0%;
+        padding-right: 2.5%;
+        padding-bottom: 0em;
+        font-size: 17px;
+        list-style-type: none;
+    }
+
+    ul {
+        padding-left: 0%;
+        margin-left: 0%;
+    }
+
     #menu1LargeSize:hover #menu1Cache,
     #menu2LargeSize:hover #menu2Cache,
     #menu3LargeSize:hover #menu3Cache,
@@ -451,5 +571,9 @@ li {
     #titreDivMinSize p {
         color: black;
         text-decoration: none;
+    }
+
+    #sousPresentation1 p { 
+        margin-bottom: 2vh;
     }
 }
