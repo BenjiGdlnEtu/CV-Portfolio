@@ -69,14 +69,6 @@ li {
 
 #entete {
     display: flex;
-    flex-direction: column;
-    height: 10%;
-    width: 100%;
-    
-}
-
-#entete {
-    display: flex;
     flex-direction: row;
     height: 10%;
     width: 100%;
@@ -159,7 +151,7 @@ li {
 }
 
 #sousPresentation2 p {
-    margin-left: 4em;
+    margin-left: 2em;
     margin-bottom: 1.5em;
     margin-right: 2em;
     text-align: justify;
@@ -168,6 +160,7 @@ li {
 
 #sousPresentation2 h2 {
     font-size: 30px;
+    margin-right: 1em;
 }
 
 #imgPresentation {
@@ -413,7 +406,7 @@ li {
 @media only screen and (max-width:1500px) {
 
     #divSuprem {
-        height: 200vh;
+        height: 195vh;
         width: 100%;
     }
 
@@ -434,7 +427,14 @@ li {
 
     #entetePart1 {
         width: 50%;
-        font-size: 10px;
+        font-size: 25px;
+    }
+
+    #divButton1, #divButton2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 
     #entetePart2 {
@@ -455,6 +455,7 @@ li {
     #entetePart2 h2 {
         padding-left: 0%;
         border: none;
+        font-size: 30px;
     }
 
     #entete {
@@ -464,14 +465,14 @@ li {
 
     #presentation {
         flex-direction: column;
-        height: 150vh;
+        height: 130vh;
         width: 100%;
         text-align: center;
     }
 
     #sousPresentation1 {
         border-left: none;
-        height: 50%;
+        height: 40%;
         width: 100%;
     }
 
@@ -490,7 +491,7 @@ li {
     }
 
     #basDePage {
-        height: 14vh;
+        height: 10vh;
         width: 100%;
     }
 
@@ -550,7 +551,7 @@ li {
         margin-left: 0%;
         padding-right: 2.5%;
         padding-bottom: 0em;
-        font-size: 17px;
+        font-size: 30px;
         list-style-type: none;
     }
 
@@ -571,9 +572,37 @@ li {
     #titreDivMinSize p {
         color: black;
         text-decoration: none;
+        font-size: 1.2vh;
     }
 
     #sousPresentation1 p { 
-        margin-bottom: 2vh;
+        margin-bottom: 22vh;
+        font-size: 80px;
+    }
+
+    #sousPresentation2 p {
+        font-size: 30px;
+    }
+
+    #sousPresentation2 h2 { 
+        font-size: 60px;
+    }
+
+    #textBandeauRetExp {
+        font-size: 30px;
+    }
+
+    #textBasDePage {
+        font-size: 30px;
+    }
+
+    #imgLogoInsta, #imgLogoFacebook {
+        height: 70px;
+        width: 70px;
+        margin-bottom: 1.5em;
+    }
+
+    #bandeauRetExp {
+        height: 5vh;
     }
 }
