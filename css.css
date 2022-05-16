@@ -315,6 +315,7 @@ p{
     height: 55.5vh;
     margin-top: -1.3vh;
     padding-bottom: 18.2vh;
+    text-align: justify;
     width: 100%;
     top: 6.3em;
     color: rgb(104, 104, 104);
@@ -324,6 +325,11 @@ p{
 #contenu2MenuCache, #contenu1MenuCache {
     display:flex;
     flex-direction: column;
+}
+
+#contenu2MenuCache {
+    margin-left: 8vh;
+    justify-content: space-between;
 }
 
 #txtMenuCache {
@@ -337,8 +343,20 @@ p{
 #imgSiteWeb img,
 #imgCreationEntreprise img,
 #imgBDD img {
+    margin-top: 4vh;
+    margin-left: 4vh;
     height: 55vh;
     width: 95vh;
+}
+
+#refsMenusCaches {
+    display: flex;
+    margin-left:55vh;
+    margin-top: 50vh;
+}
+
+#refsMenusCaches p {
+    margin-right: 1vh;
 }
 
 #imgLogoInsta, #imgLogoFacebook {
