@@ -526,4 +526,9 @@ p{
     #sousPresentation2 p {
         text-align: center;
     }
+
+    #imgPresentation {
+        height: 55vh;
+        width: 50vh;
+    }
 }
